@@ -17,7 +17,6 @@ export type State = {
   prevLocationsURL?: string;
 }
 
-
 export function InitState(): State{
   const rl = createInterface({
     input: process.stdin,

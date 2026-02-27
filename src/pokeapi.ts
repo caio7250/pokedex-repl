@@ -57,7 +57,7 @@ export class PokeAPI {
   }
 }
 
-export type Pokedex = Record<string, Pokemon>
+export type Pokedex = Record<string, Pokemon>;
 
 export type ShallowLocations = {
   count: number;

@@ -16,11 +16,11 @@ export async function commandCatch(state: State, pokemonName: string) {
 
   if (getRandomNumber(330) >= pokemon.base_experience){
     console.log("Pokemon successfully captured! Adding it to your pokedex...");
-    state.pokedex.pokemonName = pokemon;
+    state.pokedex[pokemonName] = pokemon;
     return;
   }
 
-  console.log(`Failed  to capture ${pokemonName}`);
+  console.log(`Failed to capture ${pokemonName}`);
   return
 }
 
