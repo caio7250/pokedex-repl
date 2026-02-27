@@ -1,18 +1,17 @@
 {
   "name": "pokedex",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "CLI Pokedex que consome a PokeAPI (Node + TypeScript)",
+  "main": "dist/main.js",
+  "type": "module",
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc",
     "start": "node dist/main.js",
-    "dev": "npx tsc && node dist/main.js",
+    "dev": "tsc && node dist/main.js",
     "test": "vitest --run"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["pokedex", "pokeapi", "cli"],
   "license": "ISC",
-  "description": "",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^25.3.0",
     "typescript": "^5.9.3",
