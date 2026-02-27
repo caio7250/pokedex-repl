@@ -1,63 +1,63 @@
 # Pokedex CLI
 
-CLI em Node.js + TypeScript que consome a [PokeAPI](https://pokeapi.co/) para explorar localizações, capturar e inspecionar Pokémons via um REPL interativo.
+Node.js + TypeScript CLI that consumes the [PokeAPI](https://pokeapi.co/) to explore locations, catch and inspect Pokémon via an interactive REPL.
 
-## Requisitos
+## Requirements
 
 - Node.js 18+
 - npm
 
-## Instalação
+## Installation
 
 ```bash
 npm install
 ```
 
-## Uso
+## Usage
 
-Build e execução:
+Build and run:
 
 ```bash
 npm run build
 npm start
 ```
 
-Ou em um passo (build + run):
+Or in one step (build + run):
 
 ```bash
 npm run dev
 ```
 
-No prompt `Pokedex >` você pode usar:
+At the `Pokedex >` prompt you can use:
 
-| Comando | Descrição |
-|--------|-----------|
-| `help` | Lista os comandos disponíveis |
-| `map` | Próxima página de localizações |
-| `mapb` | Página anterior de localizações |
-| `explore <nome_da_local>` | Explora uma localização e lista Pokémons |
-| `catch <nome_do_pokemon>` | Tenta capturar um Pokémon |
-| `inspect <nome_do_pokemon>` | Inspeciona um Pokémon (precisa estar na pokedex) |
-| `pokedex` | Lista os Pokémons capturados |
-| `exit` | Sai do programa |
+| Command | Description |
+|--------|-------------|
+| `help` | List available commands |
+| `map` | Next page of locations |
+| `mapb` | Previous page of locations |
+| `explore <location_name>` | Explore a location and list Pokémon |
+| `catch <pokemon_name>` | Attempt to catch a Pokémon |
+| `inspect <pokemon_name>` | Inspect a Pokémon (must be in your pokedex) |
+| `pokedex` | List captured Pokémon |
+| `exit` | Exit the program |
 
 ## Scripts
 
-- `npm run build` — compila TypeScript para `dist/`
-- `npm start` — executa `dist/main.js`
+- `npm run build` — compile TypeScript to `dist/`
+- `npm start` — run `dist/main.js`
 - `npm run dev` — build + start
-- `npm test` — roda os testes (Vitest)
+- `npm test` — run tests (Vitest)
 
-## Estrutura
+## Structure
 
-- `src/main.ts` — entrada e inicialização do REPL
-- `src/state.ts` — estado global (readline, comandos, PokeAPI, pokedex)
-- `src/repl.ts` — loop do REPL e parsing de entrada
-- `src/commands.ts` — registro dos comandos
-- `src/command_*.ts` — implementação de cada comando
-- `src/pokeapi.ts` — cliente da PokeAPI com cache
-- `src/pokecache.ts` — cache em memória com TTL
+- `src/main.ts` — entry point and REPL initialization
+- `src/state.ts` — global state (readline, commands, PokeAPI, pokedex)
+- `src/repl.ts` — REPL loop and input parsing
+- `src/commands.ts` — command registry
+- `src/command_*.ts` — implementation of each command
+- `src/pokeapi.ts` — PokeAPI client with cache
+- `src/pokecache.ts` — in-memory cache with TTL
 
-## Licença
+## License
 
 ISC
