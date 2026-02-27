@@ -16,7 +16,8 @@ export async function commandCatch(state: State, pokemonName: string) {
 
   if (getRandomNumber(330) >= pokemon.base_experience){
     console.log("Pokemon successfully captured! Adding it to your pokedex...");
-    state.pokedex[pokemonName] = pokemon;
+    console.log("You may now inspect it with the inspect command.")
+    state.pokedex[pokemonName.toLowerCase()] = pokemon;
     return;
   }
 
